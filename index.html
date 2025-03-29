@@ -3,39 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfect Life Routine</title>
+    <title>Daily Routine</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <header>
-        <h1>🌟 Perfect Life Routine 🌟</h1>
-        <p id="clock">00:00:00</p>
-        <p id="quote">"Stay focused, stay productive!"</p>
+        <h1>Daily Routine</h1>
+        <div id="live-time"></div>
+        <div class="day-buttons">
+            <button class="day-btn" data-day="Saturday">Saturday</button>
+            <button class="day-btn" data-day="Sunday">Sunday</button>
+            <button class="day-btn" data-day="Monday">Monday</button>
+            <button class="day-btn" data-day="Tuesday">Tuesday</button>
+            <button class="day-btn" data-day="Wednesday">Wednesday</button>
+            <button class="day-btn" data-day="Thursday">Thursday</button>
+        </div>
     </header>
 
-    <div class="routine">
-        <div class="task" id="sehri"><h2>🌙 Sehri & Fajr</h2><p>4:00 - 4:45 AM</p></div>
-        <div class="task" id="walk"><h2>🚶 Morning Walk / Stretch</h2><p>4:45 - 5:00 AM</p></div>
-        <div class="task" id="math"><h2>📖 Math & Science</h2><p>5:00 - 6:30 AM</p></div>
-        <div class="task" id="breakfast"><h2>🍞 Light Breakfast + Rest</h2><p>6:30 - 7:00 AM</p></div>
-        <div class="task" id="english"><h2>📝 English & Bangla</h2><p>7:00 - 8:00 AM</p></div>
-        <div class="task" id="workout"><h2>💪 Short Workout</h2><p>8:00 - 8:15 AM</p></div>
-        <div class="task" id="coding"><h2>💻 Coding Practice</h2><p>8:30 - 10:30 AM</p></div>
-        <div class="task" id="study"><h2>📚 Islam & World Studies</h2><p>10:30 - 12:00 PM</p></div>
-        <div class="task" id="help-mom"><h2>❤️ Help Mom & Lunch</h2><p>12:00 - 12:30 PM</p></div>
-        <div class="task" id="prayer"><h2>🕌 Dhuhr Prayer + Rest</h2><p>12:30 - 1:00 PM</p></div>
-        <div class="task" id="project"><h2>🚀 Project Work</h2><p>1:00 - 3:00 PM</p></div>
-        <div class="task" id="tea"><h2>☕ Asr Prayer + Tea Break</h2><p>3:00 - 3:30 PM</p></div>
-        <div class="task" id="skill"><h2>📖 Learn New Skills</h2><p>3:30 - 5:00 PM</p></div>
-        <div class="task" id="iftar"><h2>🍽️ Iftar & Maghrib</h2><p>5:30 - 6:45 PM</p></div>
-        <div class="task" id="taraweeh"><h2>🕌 Isha & Taraweeh</h2><p>7:00 - 8:00 PM</p></div>
-        <div class="task" id="relax"><h2>🎭 Relax / Family Time</h2><p>8:00 - 9:00 PM</p></div>
-        <div class="task" id="coding-night"><h2>💻 Coding / Portfolio</h2><p>9:00 - 10:00 PM</p></div>
-        <div class="task" id="read"><h2>📖 Read Quran / Books</h2><p>10:00 - 10:30 PM</p></div>
-        <div class="task" id="sleep"><h2>😴 Sleep</h2><p>10:30 PM - 4:00 AM</p></div>
-    </div>
+    <section class="motivational-quote">
+        <p id="quote"></p>
+    </section>
+
+    <main class="content-wrapper">
+        <div class="main-content">
+            <div id="routine-content">
+                <!-- Routine content will be dynamically inserted here -->
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="tab diet-tab" data-target="diet-plan">
+                <h3>Diet Plan</h3>
+            </div>
+            <div class="tab workout-tab" data-target="workout-plan">
+                <h3>Workout Plan</h3>
+            </div>
+
+            <div id="diet-plan" class="plan-section hidden">
+                <h2>Diet Plan</h2>
+                <p>Breakfast (7:00 AM): Eggs, roti, milk, or nuts</p>
+                <p>Lunch (11:30 AM): Chicken/fish, dal, rice (moderate portion)</p>
+                <p>Snack (5:30 PM): Fruits, yogurt, or nuts (avoid junk)</p>
+                <p>Dinner (7:30 PM): Light meal (less rice, more protein)</p>
+                <p>Drinks: 2-3L water daily, green tea for fat loss</p>
+            </div>
+
+            <div id="workout-plan" class="plan-section hidden">
+                <h2>Workout Plan</h2>
+                <div id="workout-content">
+                    <!-- Workout content will be dynamically inserted based on the day -->
+                </div>
+            </div>
+        </div>
+    </main>
 
     <script src="script.js"></script>
 </body>
-                                                                </html>
+</html>
